@@ -501,6 +501,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .play .rrow.flag{animation:fade .5s var(--ease) both calc(var(--k)*110ms),nudge .6s var(--spring) 1s}
 @keyframes nudge{0%,100%{transform:none}30%{transform:translateX(-4px)}60%{transform:translateX(3px)}}
 @media (max-width:420px){.fgroups{grid-template-columns:1fr}}
+/* v7 medium write-up */
+.f-actions{display:flex;flex-direction:column;gap:8px;align-items:stretch}
+@media (max-width:640px){.f-actions{flex-direction:row;flex-wrap:wrap}}
+.writeup{display:inline-flex;align-items:center;gap:10px;margin-top:14px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;text-decoration:none;background:var(--surface);max-width:100%;transition:border-color .2s,background .2s,transform .3s var(--ease)}
+.writeup:hover{border-color:var(--ink);background:var(--bg);transform:translateY(-2px)}
+.wu-k{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);background:var(--accent-soft);padding:2px 7px;border-radius:5px;flex:none}
+.wu-t{font-size:14px;font-weight:500;min-width:0}
+.wu-a{color:var(--muted);flex:none;transition:transform .3s var(--ease)}
+.writeup:hover .wu-a{transform:translate(2px,-2px);color:var(--ink)}
 @media (prefers-reduced-motion:reduce){
   .ill .wig,.sec-head .ill,.ill-edu{animation:none!important}
   .hw{opacity:1;transform:none;filter:none}.mq{animation:none}
@@ -630,8 +639,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <h3 class="f-title">New seasons shrink, but they bring old ones back</h3>
             <p class="f-desc">I combined 7 Netflix engagement reports (2023–2026) with weekly Top 10 data, then used event studies, matching and conformal forecasting to turn a descriptive puzzle into renewal and release-strategy recommendations, written up as a one-page memo.</p>
             <div class="stack">Python · pandas · statsmodels · pyfixest · scikit-learn · LightGBM</div>
+            <a class="writeup" href="https://medium.com/@vorugantipradeep2331/netflixs-halo-effect-why-a-new-season-can-revive-an-entire-franchise-d985c981f46c?source=friends_link&amp;sk=361e1c2828a9687db3b082db32f20928" target="_blank" rel="noopener"><span class="wu-k">Write-up</span><span class="wu-t">Netflix's Halo Effect: Why a New Season Can Revive an Entire Franchise</span><span class="wu-a">↗</span></a>
           </div>
-          <a class="btn" href="https://github.com/Pradeep6249/netflix-season2-paradox" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>View on GitHub</a>
+          <div class="f-actions">
+            <a class="btn" href="https://github.com/Pradeep6249/netflix-season2-paradox" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>View on GitHub</a>
+            <a class="btn" href="https://medium.com/@vorugantipradeep2331/netflixs-halo-effect-why-a-new-season-can-revive-an-entire-franchise-d985c981f46c?source=friends_link&amp;sk=361e1c2828a9687db3b082db32f20928" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg>Read on Medium</a>
+          </div>
         </div>
 
         <div class="tabs" role="tablist" aria-label="Netflix findings">
@@ -994,6 +1007,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <div class="email"><span id="emailText">Vorugantipradeep2331@gmail.com</span><button id="copyEmail" aria-label="Copy email address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span style="padding:0;font-family:var(--body)" id="copyLbl">Copy</span></button></div>
           <a class="btn" href="https://www.linkedin.com/in/pradeep-kumar-voruganti" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V21h-4z"/></svg>LinkedIn</a>
           <a class="btn" href="https://github.com/Pradeep6249" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>GitHub</a>
+          <a class="btn" href="https://medium.com/@vorugantipradeep2331/netflixs-halo-effect-why-a-new-season-can-revive-an-entire-franchise-d985c981f46c?source=friends_link&amp;sk=361e1c2828a9687db3b082db32f20928" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg>Medium</a>
         </div>
       </div>
     </div>
@@ -1226,6 +1240,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     ['Fraud project','Validation suite & bias check','',I.arrow,tabByF('t-fval')],
     ['Links','Netflix project on GitHub','github.com',I.link,()=>open('https://github.com/Pradeep6249/netflix-season2-paradox')],
     ['Links','Fraud scoring project on GitHub','github.com',I.link,()=>open('https://github.com/Pradeep6249/Fraud-Risk-Scoring')],
+    ['Links','Netflix write-up on Medium','medium.com',I.link,()=>open('https://medium.com/@vorugantipradeep2331/netflixs-halo-effect-why-a-new-season-can-revive-an-entire-franchise-d985c981f46c?source=friends_link&sk=361e1c2828a9687db3b082db32f20928')],
     ['Links','LinkedIn','linkedin.com',I.link,()=>open('https://www.linkedin.com/in/pradeep-kumar-voruganti')],
     ['Actions','Copy email address','',I.bolt,()=>$('#copyEmail').click()],
     ['Actions','Toggle dark mode','',I.bolt,toggleTheme]
